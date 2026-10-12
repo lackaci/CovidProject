@@ -1,0 +1,9 @@
+# Verified in the active Python 3.11.0 environment.
+# The notebook metadata records Python 3.13.2; use a supported Python version if
+# TensorFlow wheels are unavailable for the selected interpreter.
+matplotlib==3.10.6
+nbstripout==0.9.1
+numpy==2.3.3
+pandas==2.3.2
+scikit-learn==1.7.2
+tensorflow==2.20.0

@@ -1,0 +1,13 @@
+# Local data and environments
+Data/
+.venv/
+
+# Notebook and Python caches
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+desktop.ini
