@@ -39,3 +39,11 @@ Routine edits are not logged. Read `docs/WORKFLOW_GUIDE.md` for the big picture.
 **Effect on results:** none in the current sample; the fix makes the data integrity visible instead of silently changing the numbers.
 **Physics analogy:** A missing measurement is like an unobserved meter reading, not a zero reading. You cannot infer the system is at rest unless you actually measured it.
 **Check yourself:** Explain the difference between “No deaths were reported” and “Deaths were not reported.”
+
+### 2026-10-13 - Week-overlap policy logic  (agent: data-auditor, branch: improve/data-correctness)
+**What changed:** Replaced the Monday-only `W-MON` policy expansion with overlap logic that marks a policy as active for any Mon-Sun week it touches. The diagnostic showed 1,356 / 1,986 policy intervals were affected by the old logic.
+**Why:** A policy active on Tuesday or Wednesday still counts for that week, and a one-week measure can otherwise disappear when it starts after Monday or stays entirely inside a single week.
+**Practice used:** Time-window overlap logic and sanity checks.
+**Effect on results:** The policy feature matrix changed: weeks that were previously undercounted are now included, with the number of policy measures increasing from 65 to 66 in the current build.
+**Physics analogy:** A time-varying signal should count for every week it overlaps, just as a force applied during part of a measurement window contributes to that interval.
+**Check yourself:** Explain why a policy measure active on a Tuesday should still count for the Monday-Sunday week containing that Tuesday.
