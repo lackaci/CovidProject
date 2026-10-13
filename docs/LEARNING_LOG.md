@@ -31,3 +31,11 @@ Routine edits are not logged. Read `docs/WORKFLOW_GUIDE.md` for the big picture.
 **Effect on results:** The conclusion is now explicit: ridge beat persistence (MAE ratio 0.836); neither neural model did.
 **Physics analogy:** Persistence is the null hypothesis: extra model structure must explain enough signal to reduce the residuals.
 **Check yourself:** Explain why a model with a lower raw-count error is not automatically better when countries have different populations.
+
+### 2026-10-13 - Explicit missingness for deaths  (agent: data-auditor, branch: improve/data-correctness)
+**What changed:** Added a `deaths_missing` flag and printed the count before any numeric fill, instead of silently converting missing deaths to zero in the case dataset. The model-ready frame now retains the missingness signal and documents that the fill happens only in a visible downstream feature step.
+**Why:** Missing data and real zero deaths are not the same thing. Treating the unknown as zero can fake stable or low-death weeks and distort the modelling target and historical features.
+**Practice used:** Missing-data handling and explicit feature engineering.
+**Effect on results:** none in the current sample; the fix makes the data integrity visible instead of silently changing the numbers.
+**Physics analogy:** A missing measurement is like an unobserved meter reading, not a zero reading. You cannot infer the system is at rest unless you actually measured it.
+**Check yourself:** Explain the difference between “No deaths were reported” and “Deaths were not reported.”

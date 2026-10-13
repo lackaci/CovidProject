@@ -19,7 +19,7 @@ Legend: `[ ]` todo, `[x]` done. Owner role in brackets.
 - [ ] Add a results figure under `docs/img/` and reference it from the README
 
 ## 2. Data correctness  [data-auditor]
-- [ ] Stop `fillna(0)` on missing deaths; count them, decide (drop / indicator column), document
+- [x] Stop `fillna(0)` on missing deaths; count them, decide (drop / indicator column), document — Kept a `deaths_missing` flag and printed the missing count before any model-ready numeric fill; the unknown death count is no longer silently changed into zero.
 - [ ] Fix policy-to-week alignment: a measure active any day in a Mon-Sun week counts for that week (current `W-MON` expansion misses weeks where an interval starts after Monday or lives inside one week)
 - [ ] Handle week gaps: split or reindex so sequence windows never span a gap (currently only a warning)
 - [ ] Count and report negative ECDC corrections before `clip(lower=0)`
