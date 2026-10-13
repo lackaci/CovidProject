@@ -57,5 +57,5 @@ Legend: `[ ]` todo, `[x]` done. Owner role in brackets.
 - [ ] CI badge in README
 
 ## 6. Final review  [reviewer]
-- [ ] Re-run the two-persona review (hiring manager and team lead) and compare scores with the original (about 4/10)
+- [ ] Re-run the  review (team lead) and compare scores with the original (about 4/10)
 - [ ] List anything still open and decide what is "good enough"

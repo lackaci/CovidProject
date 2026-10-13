@@ -5,7 +5,7 @@ tools: ['read', 'search', 'edit', 'execute', 'runNotebooks', 'web']
 handoffs:
   - label: Run final review
     agent: reviewer
-    prompt: Quality gate is in place. Run the final two-persona review.
+    prompt: Quality gate is in place. Run the final review.
     send: false
   - label: Back to project lead
     agent: project-lead

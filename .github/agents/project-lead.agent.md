@@ -25,7 +25,7 @@ handoffs:
     send: false
   - label: Run final review
     agent: reviewer
-    prompt: Run the two-persona review described in section 6 of docs/IMPROVEMENT_PLAN.md.
+    prompt: Run the review described in section 6 of docs/IMPROVEMENT_PLAN.md.
     send: false
 ---
 
